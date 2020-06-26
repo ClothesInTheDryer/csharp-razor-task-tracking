@@ -20,7 +20,7 @@ namespace Tasker.Pages
         }
         public IActionResult OnPost()
         {
-            
+            _context.Tasks.Add(NewTask);
             return RedirectToPage("Index");
         }
         public void OnGet()
