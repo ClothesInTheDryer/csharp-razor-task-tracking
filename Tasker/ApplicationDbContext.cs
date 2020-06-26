@@ -8,14 +8,14 @@ namespace Tasker
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContext options)
+        public ApplicationDbContext(DbContextOptions options)
         {
             this.Options = options;
         }
 
         public DbSet<Task> Tasks { get; set; }
 
-        DbContext Options { get; set; }
+        private DbContextOptions Options { get; set; }
         
 
         
